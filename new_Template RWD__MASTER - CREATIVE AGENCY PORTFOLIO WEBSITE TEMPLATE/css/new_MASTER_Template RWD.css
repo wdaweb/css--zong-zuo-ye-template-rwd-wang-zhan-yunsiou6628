@@ -1,0 +1,1539 @@
+/* --- 手機最小尺寸 ------------- */
+
+/* --- 視窗大小設定 ------------- */
+#section {
+  margin: auto;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: white;
+}
+
+/* --- 一、大圖區 section01 ------------- */
+#section01 {
+  margin: 0;
+  height: 780px;
+  position: relative;
+  background: url('../images/slide1.jpg') no-repeat center/cover;
+
+  /* 消除幽靈空白 */
+  vertical-align: top;
+}
+
+/* 大圖 img */
+.object-fit {
+  display: none;
+  object-fit: cover;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+/* 左箭頭點選 */
+#section01 .leftbtn {
+  width: 4rem;
+  height: 3.5rem;
+  position: absolute;
+  top: 36.5%;
+  left: 0;
+  border: none;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 3;
+}
+
+#section01 .leftbtn:hover {
+  background: rgb(255, 255, 255);
+}
+
+#section01 .leftbtn img {
+  width: 1.5rem;
+  height: 1.5rem;
+  padding: 30%;
+  /* background: blue; */
+}
+
+#section01 .leftbtn img:hover {
+  /* 改變箭頭明度 */
+  filter: brightness(0.6);
+}
+
+/* 右箭頭點選 */
+#section01 .rightbtn {
+  width: 4rem;
+  height: 3.5rem;
+  position: absolute;
+  top: 36.5%;
+  right: 0;
+  border: none;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 3;
+}
+
+#section01 .rightbtn:hover {
+  background: rgb(255, 255, 255);
+}
+
+#section01 .rightbtn img {
+  width: 1.5rem;
+  height: 1.5rem;
+  padding: 30%;
+  /* background: blue; */
+}
+
+#section01 .rightbtn img:hover {
+  /* 改變箭頭明度 */
+  filter: brightness(0.6);
+}
+
+/* --- 圓形置中字 ------------- */
+
+#section01 .slide-title {
+  position: absolute;
+
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%);
+  z-index: 3;
+  /* background: lightseagreen; */
+}
+
+#section01 .inner-circle {
+  width: 18rem;
+  height: 18rem;
+  border: 2px solid white;
+  border-radius: 50%;
+
+  font-size: 50px;
+  color: white;
+  text-align: center;
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#section01 .inner-circle::before {
+  content: '';
+  width: 23rem;
+  height: 23rem;
+  opacity: 30%;
+  border: 1px solid white;
+  border-radius: 50%;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+/* --- 平板和電腦才出現內容 ------------- */
+
+/* --- 左字 觸碰出現 ------------- */
+.liftword {
+  display: none;
+}
+
+/* --- 右字 觸碰出現 ------------- */
+.rightword {
+  display: none;
+}
+
+/* --- SERVICES + 向下箭頭 ------------- */
+.services {
+  display: none;
+}
+
+
+/* --- 二、header navbar section02 導覽列 + 選單列表 ------------- */
+
+#section02 {
+  background-color: #e74c3c;
+  height: 100px;
+  position: relative;
+}
+
+/* 滾輪滾動置頂設定 - 搭配 JS 內容 */
+/* 新增一個 class => .sticky */
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+/* --- logo ------------- */
+
+#section02 .logo-a {
+  position: absolute;
+  top: 35%;
+  left: 5%;
+  z-index: 2;
+}
+
+#section02 img {
+  width: 100%;
+  /* background: rgba(37, 64, 104, 1); */
+  z-index: 3;
+}
+
+/* --- 右上角縮圖 ------------- */
+
+#navbarbtn {
+  width: 100%;
+  height: 70px;
+  z-index: 1;
+  /* background: rgba(37, 64, 104, 1); */
+}
+
+#navbarbtn i {
+  position: absolute;
+  top: 30%;
+  right: 5%;
+  color: white;
+  font-size: 40px;
+  cursor: pointer;
+  /* background: rgba(37, 64, 104, 0.5); */
+}
+
+/* --- menu_list 點開 選單列表 ------------- */
+
+label {
+  display: block;
+}
+
+/* /滑鼠滑到label文字時，滑鼠游標變成手型圖示/ */
+label:hover {
+  cursor: pointer;
+}
+
+/* /當核許框為勾選時，隱藏.toogle-box區塊/ */
+input[type=checkbox]:checked+div {
+  max-height: 0;
+  display: none;
+}
+
+.toggle-box {
+  width: 100%;
+  display: inline-block;
+  padding: 3% 0;
+  overflow: hidden;
+  background: #e74c3c;
+  position: absolute;
+  top: 80%;
+}
+
+/* 設定 ::before 關掉 */
+input[type=checkbox]:checked+div::before {
+  display: none;
+}
+
+.toggle-box::before {
+  content: '';
+  width: 90%;
+  height: 1px;
+  background: white;
+
+  position: absolute;
+  left: 5%;
+}
+
+input {
+  display: none;
+}
+
+.toggle-box button {
+  width: 100%;
+  height: 30px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.toggle-box button:hover {
+  color: black;
+  animation: animate 1.5s linear infinite;
+  transition: 1s;
+}
+
+.toggle-box span {
+  font-size: 45%;
+  font-weight: bold;
+  position: absolute;
+  left: 5%;
+}
+
+
+/* --- 三、SERVICES 服務介紹 (圈圈設計版型 + icon) ------------- */
+
+#section03 .row {
+  margin: 5%;
+}
+
+#section03 .col {
+  padding: 5%;
+}
+
+#section03 .services_img {
+  display: none;
+}
+
+#section03 .card {
+  text-align: center;
+}
+
+#section03 .circular {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  margin: auto;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(240, 240, 240);
+}
+
+#section03 .circular i {
+  font-size: 55px;
+  color: gray;
+}
+
+/* 四、FEATURES 特徵 (手機介紹 + icon + 線)------------------------------------------ */
+
+#section04 {
+  width: 100%;
+  background-image: url(../images/features-bg.jpg);
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: inline-block;
+  /* 高度靠內容物尺寸撐起來 */
+  position: relative;
+  /* perspective-origin: 0 0; */
+
+  font-size: 14px;
+  font-family: 'Raleway', sans-serif;
+  z-index: 0;
+}
+
+#section04::before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 90%;
+  background: #e74c3c;
+  box-sizing: border-box;
+  z-index: -1;
+}
+
+#section04 .container {
+  width: 100%;
+  margin: 60px auto;
+  padding: 20px;
+  /* background: lightgreen; */
+  z-index: 1;
+}
+
+#section04 .mobileimg {
+  display: none;
+}
+
+#section04 .features_textbox {
+  position: relative;
+  color: white;
+}
+
+#section04 .features_textbox h1 {
+  width: 100%;
+  text-align: center;
+  font-size: 36px;
+}
+
+#section04 .col {
+  width: 100%;
+  height: 20%;
+  padding: 10px;
+  /* background: rgba(238, 130, 238, 0.489); */
+}
+
+#section04 .card {
+  width: 400px;
+  height: 100px;
+  padding: 30px 10px;
+
+  display: flex;
+  flex-direction: row;
+  /* background: lightseagreen; */
+}
+
+#section04 .circular {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: white;
+
+  z-index: 2;
+}
+
+#section04 .circular i {
+  font-size: 40px;
+  color: #e74c3c;
+}
+
+#section04 .featurestext {
+  width: 60%;
+  text-align: left;
+
+  position: absolute;
+  left: 150px;
+}
+
+#section04 .featurestext h2 {
+  margin: 5px 0;
+}
+
+#section04 .featurestext p {
+  font-size: 16px;
+}
+
+/* 五、OUR WORK (manu + 圖) -------------------------------- */
+
+#section05 .container {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#section05 h1 {
+  text-align: center;
+  font-size: 36px;
+  margin: 20% 10% 10% 10%;
+  color: rgb(75, 75, 75);
+}
+
+#section05 .ourwork_menu {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin: 10% 0;
+}
+
+#section05 .ourwork_menu .menu-item {
+  display: inline-block;
+}
+
+#section05 .ourwork_menu .menu-item span {
+  font-size: 14px;
+}
+
+#section05 .ourwork_menu .menu-item:nth-child(1) {
+  background: #e74c3c;
+}
+
+#section05 .ourwork_menu .menu-item:nth-child(1) a {
+  color: white;
+}
+
+#section05 .ourwork_menu a {
+  color: gray;
+  text-decoration: none;
+  font-size: 1.2rem;
+  display: block;
+  padding: 1rem;
+}
+
+#section05 .row {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+#section05 .col {
+  width: 100%;
+  background: lightpink;
+}
+
+#section05 .col img {
+  width: 100%;
+  height: 100%;
+  /* 消除幽靈空白 */
+  vertical-align: middle;
+  border: 0;
+  object-fit: cover;
+}
+
+/* 六、WHY CHOOSE US (介紹 + icon) */
+#section06 {
+  background-image: url(../images/why-choose-bg.jpg);
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: inline-block;
+  width: 100%;
+  position: relative;
+  z-index: 0;
+}
+
+#section06::before {
+  content: '';
+  width: 100%;
+  height: 80%;
+  position: absolute;
+  top: 0%;
+  right: 0%;
+  opacity: 90%;
+  background: #e74c3c;
+  box-sizing: border-box;
+  border-top: 1026px solid rgba(231, 76, 60, 0.90);
+  border-bottom: 0px solid rgba(231, 76, 60, 0.90);
+  border-left: 0px solid transparent;
+  border-right: 260px solid transparent;
+
+}
+
+
+#section06 .container {
+  width: 100%;
+  margin: 60px auto;
+  display: flex;
+  /* background: lightgreen; */
+  z-index: 1;
+}
+
+#section06 .row {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+}
+
+#section06 .why_choose_us_textbox {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  /* background: lightsalmon; */
+  color: white;
+}
+
+#section06 .why_choose_us_textbox h1 {
+  width: 95%;
+  text-align: center;
+  margin: 40px 0;
+  font-size: 36px;
+  text-transform: uppercase;
+}
+
+#section06 .col {
+  width: 100%;
+  height: 20%;
+  position: relative;
+  /* background: rgba(238, 130, 238, 0.489); */
+}
+
+#section06 .card {
+  width: 80%;
+  height: 80px;
+  padding: 30px 65px;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  /* background: rgba(135, 238, 130, 0.489); */
+}
+
+#section06 .circular {
+  position: relative;
+  top: -32%;
+  left: -5%;
+  z-index: 2;
+}
+
+#section06 .circular i {
+  font-size: 30px;
+}
+
+#section06 .why_choose_us_text p {
+  font-size: 16px;
+}
+
+
+
+
+
+
+/* 平板 寬  (min-width: 768px) and (max-width: 991px) */
+@media(min-width:768px) {
+
+  .container {
+    width: 750px;
+  }
+
+  /* 左箭頭點選 */
+  #section01 .leftbtn {
+    width: 7rem;
+    height: 6.5rem;
+  }
+
+  /* 右箭頭點選 */
+  #section01 .rightbtn {
+    width: 7rem;
+    height: 6.5rem;
+  }
+
+
+  /* --- 左字 觸碰出現 ------------- */
+  .liftword {
+    display: block;
+    opacity: 0%;
+    cursor: pointer;
+
+    font-size: 25px;
+    color: white;
+    position: absolute;
+    bottom: 15%;
+    left: 10%;
+    /* 補動畫 */
+  }
+
+  .liftword:hover {
+    display: block;
+    opacity: 100%;
+  }
+
+  /* --- 右字 觸碰出現 ------------- */
+  .rightword {
+    display: block;
+    opacity: 0%;
+    cursor: pointer;
+
+    font-size: 26px;
+    text-align: right;
+    color: white;
+    position: absolute;
+    bottom: 15%;
+    right: 10%;
+  }
+
+  .rightword:hover {
+    display: block;
+    opacity: 100%;
+  }
+
+  /* --- SERVICES + 向下箭頭 ------------- */
+  .services {
+    display: block;
+    font-size: 26px;
+    text-align: right;
+    color: white;
+
+    position: absolute;
+    bottom: 3%;
+    left: 50%;
+    transform: translate(-50%);
+    text-align: center;
+  }
+
+  .services img {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  /* --- 三、SERVICES 服務介紹 (圈圈設計版型 + icon) ------------- */
+
+  #section03 .row {
+    margin: 0 0 120px 0;
+  }
+
+  #section03 .col {
+    padding: 5% 10%;
+  }
+
+  #section03 .services_img {
+    display: none;
+  }
+
+  #section03 .circular {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    background: rgb(240, 240, 240);
+
+    position: absolute;
+  }
+
+  #section03 .text {
+    position: relative;
+    top: -50%;
+    transform: translate(0, 50%);
+
+    text-align: left;
+    margin-left: 200px;
+    margin-top: 10%;
+  }
+
+  /* --- 四、FEATURES 特徵 -------------  */
+
+  #section04 {
+    /* background-image: url(../images/features-bg.jpg); */
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    display: inline-block;
+    width: 100%;
+    /* 高度靠內容物尺寸撐起來 */
+    position: relative;
+    /* perspective-origin: 0 0; */
+
+    font-size: 14px;
+    font-family: 'Raleway', sans-serif;
+    z-index: 0;
+  }
+
+  #section04::before {
+    content: '';
+    width: 85%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: -15%;
+    opacity: 90%;
+    background: #e74c3c;
+    box-sizing: border-box;
+    border-top: 1026px solid rgba(231, 76, 60, 0.90);
+    border-bottom: 0px solid rgba(231, 76, 60, 0.90);
+    border-left: 0px solid transparent;
+    border-right: 260px solid transparent;
+    -webkit-transform: skew(-15deg);
+  }
+
+  #section04 .container {
+    width: 768px;
+    margin: 60px auto;
+    padding: 20px;
+    display: flex;
+    /* background: lightgreen; */
+  }
+
+  #section04 .row {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+  }
+
+  #section04 .mobileimg {
+    display: none;
+  }
+
+  #section04 .features_textbox {
+
+    -webkit-transform: skew(-15deg);
+    position: relative;
+    /* background: lightsalmon; */
+
+    color: white;
+  }
+
+  #section04 .features_textbox h1 {
+    width: 520px;
+    text-align: right;
+    margin: 40px;
+    font-size: 48px;
+    text-transform: uppercase;
+    -webkit-transform: skew(15deg);
+  }
+
+  #section04 .col {
+    width: 100%;
+    height: 20%;
+    padding: 10px;
+    position: relative;
+    /* background: rgba(238, 130, 238, 0.489); */
+  }
+
+  #section04 .card {
+    width: 800px;
+    height: 100px;
+    padding: 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background: lightseagreen; */
+  }
+
+  #section04 .circular {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    -webkit-transform: skew(15deg);
+
+    position: absolute;
+    right: 0%;
+    margin-right: 20%;
+    z-index: 2;
+  }
+
+  #section04 .circular i {
+    font-size: 40px;
+    color: #e74c3c;
+  }
+
+  #section04 .featurestext {
+    width: 400px;
+    text-align: right;
+    -webkit-transform: skew(15deg);
+    /* background: lightgreen; */
+
+    position: absolute;
+    left: 18%;
+  }
+
+  #section04 .featurestext h2 {
+    margin: 10px 0;
+  }
+
+  #section04 .featurestext p {
+    font-size: 16px;
+    margin: 10px 15px;
+  }
+
+  /* 五、OUR WORK (manu + 圖) -------------------------------- */
+  #section05 h1 {
+    font-size: 48px;
+    margin-top: 10%;
+  }
+
+  #section05 .ourwork_menu {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin: 5% 0;
+  }
+
+  #section05 .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    overflow: hidden;
+    box-sizing: border-box;
+  }
+
+  #section05 .col {
+    width: 50%;
+  }
+
+  /* 六、WHY CHOOSE US (介紹 + icon) */
+  #section06 {
+    background-image: url(../images/why-choose-bg.jpg);
+    background-repeat: no-repeat;
+    overflow: hidden;
+    display: inline-block;
+    width: 100%;
+    position: relative;
+    z-index: 0;
+  }
+
+  #section06::before {
+    content: '';
+    width: 98%;
+    height: 80%;
+    position: absolute;
+    top: 0;
+    right: -15%;
+    opacity: 90%;
+    background: #e74c3c;
+    box-sizing: border-box;
+    border-top: 1026px solid rgba(231, 76, 60, 0.90);
+    border-bottom: 0px solid rgba(231, 76, 60, 0.90);
+    border-left: 0px solid transparent;
+    border-right: 260px solid transparent;
+    -webkit-transform: skew(-15deg);
+  }
+
+
+  #section06 .container {
+    width: 100%;
+    margin: 60px auto;
+    padding: 30px;
+    display: flex;
+    /* background: lightgreen; */
+    z-index: 1;
+  }
+
+  #section06 .row {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+  }
+
+  #section06 .why_choose_us_textbox {
+    width: 100%;
+    height: 100%;
+    -webkit-transform: skew(-15deg);
+    position: relative;
+    left: 10%;
+    /* background: lightsalmon; */
+    color: white;
+  }
+
+  #section06 .why_choose_us_textbox h1 {
+    width: 100%;
+    text-align: left;
+    margin: 3% 20%;
+    font-size: 48px;
+    text-transform: uppercase;
+    -webkit-transform: skew(15deg);
+  }
+
+  #section06 .col {
+    width: 100%;
+    height: 20%;
+    position: relative;
+    /* background: rgba(238, 130, 238, 0.489); */
+  }
+
+  #section06 .card {
+    width: 85%;
+    height: 80px;
+    padding: 30px 0px;
+
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    /* background: rgba(135, 238, 130, 0.489); */
+  }
+
+  #section06 .circular {
+    -webkit-transform: skew(15deg);
+    position: relative;
+    top: -32%;
+    left: -5%;
+    z-index: 2;
+  }
+
+  #section06 .circular i {
+    font-size: 30px;
+  }
+
+  #section06 .why_choose_us_text {
+    -webkit-transform: skew(15deg);
+  }
+
+  #section06 .why_choose_us_text p {
+    font-size: 16px;
+    width: 80%;
+  }
+
+
+
+
+
+}
+
+
+
+/* 電腦 寬 100% * 卷軸長度 19520 */
+@media(min-width:1200px) {
+
+  /* --- 圓形置中字 ------------- */
+
+  #section01 .slide-title {
+    position: absolute;
+
+    top: 16%;
+    left: 50%;
+    transform: translate(-50%);
+    z-index: 3;
+  }
+
+  #section01 .inner-circle {
+    width: 25rem;
+    height: 25rem;
+    border: 2px solid white;
+    border-radius: 50%;
+
+    font-size: 68px;
+    color: white;
+    text-align: center;
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #section01 .inner-circle::before {
+    content: '';
+    width: 32rem;
+    height: 32rem;
+    opacity: 30%;
+    border: 1px solid white;
+    border-radius: 50%;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  /* --- 左字 觸碰出現 ------------- */
+  .liftword {
+    display: block;
+    font-size: 32px;
+    /* 補動畫 */
+  }
+
+  /* --- 右字 觸碰出現 ------------- */
+  .rightword {
+    display: block;
+    font-size: 32px;
+  }
+
+  /* --- SERVICES + 向下箭頭 ------------- */
+  .services {
+    display: block;
+    font-size: 20px;
+    text-align: right;
+    color: white;
+
+    position: absolute;
+    bottom: 3%;
+    left: 50%;
+    transform: translate(-50%);
+    text-align: center;
+  }
+
+  .services img {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+
+  /* --- 三、SERVICES 服務介紹 (圈圈設計版型 + icon) ------------- */
+
+  #section03 {
+    /* background: rgba(255, 220, 22, 0.5); */
+    position: relative;
+  }
+
+  #section03 .container {
+    width: 1170px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  #section03 .row {
+    margin: 10% 0;
+    /* background: lightgreen; */
+  }
+
+  #section03 .services_img {
+    display: block;
+    /* display: flex; */
+    /* justify-content: center;
+    align-items: center; */
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+  }
+
+  #section03 .services_img h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: 0 auto;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 200%;
+  }
+
+  .col_frame {
+    width: 100%;
+    height: 536px;
+    /* background: lightgreen; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #section03 .col {
+    width: 50%;
+    height: 150px;
+    box-sizing: border-box;
+    /* background: rgb(64, 132, 154); */
+    /* border: 2px solid white; */
+    padding: 0 20px;
+    position: relative;
+  }
+
+  #section03 .col:nth-child(3) {
+    left: -117px;
+    margin: 43px 0;
+  }
+
+  #section03 .col:nth-child(4) {
+    right: -117px;
+    margin: 43px 0;
+  }
+
+  #section03 .card {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+
+  /* 選到 col 包的卡片 (1.3.5) */
+  #section03 .col:nth-child(odd) .circular {
+    order: 2;
+    /* background: red; */
+    /* static 預設 */
+    position: static;
+  }
+
+  #section03 .col:nth-child(odd) .text {
+    order: 1;
+    /* background: blue; */
+    margin-left: 0px;
+    margin-right: 60px;
+    text-align: right;
+    width: 66.66666%;
+  }
+
+  #section03 .circular {
+    z-index: 2;
+  }
+
+  #section03 .circular i {
+    font-size: 40px;
+    color: gray;
+  }
+
+  #section03 .text {
+    margin-top: 0;
+  }
+
+  /* --- 四、FEATURES 特徵 -------------  */
+
+  #section04 {
+    /* background-image: url(../images/features-bg.jpg); */
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    display: inline-block;
+    width: 100%;
+    /* 高度靠內容物尺寸撐起來 */
+    position: relative;
+    /* perspective-origin: 0 0; */
+
+    font-size: 14px;
+    font-family: 'Raleway', sans-serif;
+    z-index: 0;
+  }
+
+  #section04::before {
+    content: '';
+    width: 58%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: -10%;
+    opacity: 90%;
+    background: #e74c3c;
+    box-sizing: border-box;
+    border-top: 1026px solid rgba(231, 76, 60, 0.90);
+    border-bottom: 0px solid rgba(231, 76, 60, 0.90);
+    border-left: 0px solid transparent;
+    border-right: 260px solid transparent;
+    -webkit-transform: skew(-15deg);
+  }
+
+  #section04 .container {
+    width: 1200px;
+    margin: 60px auto;
+    padding: 20px;
+    display: flex;
+    /* background: lightgreen; */
+  }
+
+  #section04 .row {
+    width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+  }
+
+  #section04 .mobileimg {
+    display: inline-block;
+    width: 280px;
+    height: 590px;
+    padding: 60px;
+    margin-top: 100px;
+    /* background: red; */
+  }
+
+  #section04 .features_textbox {
+    width: 850px;
+    height: 750px;
+    -webkit-transform: skew(-15deg);
+    position: relative;
+    /* background: lightsalmon; */
+
+    color: white;
+  }
+
+  #section04 .features_textbox h1 {
+    width: 520px;
+    text-align: right;
+    margin: 40px;
+    font-size: 48px;
+    text-transform: uppercase;
+    -webkit-transform: skew(15deg);
+  }
+
+  #section04 .col {
+    width: 100%;
+    height: 20%;
+    padding: 10px;
+    position: relative;
+    /* background: rgba(238, 130, 238, 0.489); */
+  }
+
+  #section04 .card {
+    width: 800px;
+    height: 100px;
+    padding: 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background: lightseagreen; */
+  }
+
+  #section04 .circular {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    -webkit-transform: skew(15deg);
+
+    position: absolute;
+    right: 0%;
+    margin-right: 20%;
+    z-index: 2;
+  }
+
+  #section04 .circular i {
+    font-size: 40px;
+    color: #e74c3c;
+  }
+
+
+  #section04 .featurestext {
+    width: 400px;
+    text-align: right;
+    -webkit-transform: skew(15deg);
+    /* background: lightgreen; */
+
+    position: absolute;
+    left: 18%;
+  }
+
+  #section04 .featurestext h2 {
+    margin: 10px 0;
+  }
+
+  #section04 .featurestext p {
+    font-size: 16px;
+    margin: 10px 15px;
+  }
+
+  #section04 .lightbulb_line {
+    -webkit-transform: rotate(15deg);
+  }
+
+  #section04 .lightbulb_line hr {
+    width: 310px;
+    border-top: 1px solid white;
+
+    /* relative => .col */
+    position: absolute;
+    top: -65px;
+    left: 245px;
+    z-index: 1;
+  }
+
+  #section04 .lightbulb_line i {
+    width: 15px;
+    height: 15px;
+    background-color: #fff;
+    border-radius: 50%;
+    transform: skew(15deg);
+
+    position: absolute;
+    top: -65px;
+    left: 550px;
+    z-index: 2;
+  }
+
+  #section04 .house_line {
+    -webkit-transform: rotate(5deg);
+  }
+
+  #section04 .house_line hr {
+    width: 440px;
+    border-top: 1px solid white;
+
+    /* relative => .col */
+    position: absolute;
+    top: -30px;
+    left: 245px;
+    z-index: 1;
+  }
+
+  #section04 .house_line i {
+    width: 15px;
+    height: 15px;
+    background-color: #fff;
+    border-radius: 50%;
+    transform: skew(15deg);
+
+    position: absolute;
+    top: -30px;
+    left: 685px;
+    z-index: 2;
+  }
+
+  #section04 .gift_line {
+    -webkit-transform: rotate(-10deg);
+  }
+
+  #section04 .gift_line hr {
+    width: 420px;
+    border-top: 1px solid white;
+
+    /* relative => .col */
+    position: absolute;
+    top: 40px;
+    left: 245px;
+    z-index: 1;
+  }
+
+  #section04 .gift_line i {
+    width: 15px;
+    height: 15px;
+    background-color: #fff;
+    border-radius: 50%;
+    transform: skew(15deg);
+
+    position: absolute;
+    top: 40px;
+    left: 660px;
+    z-index: 2;
+  }
+
+  #section04 .camera_line {
+    -webkit-transform: rotate(-20deg);
+  }
+
+  #section04 .camera_line hr {
+    width: 400px;
+    border-top: 1px solid white;
+
+    /* relative => .col */
+    position: absolute;
+    top: 85px;
+    left: 235px;
+    z-index: 1;
+  }
+
+  #section04 .camera_line i {
+    width: 15px;
+    height: 15px;
+    background-color: #fff;
+    border-radius: 50%;
+    transform: skew(15deg);
+
+    position: absolute;
+    top: 85px;
+    left: 630px;
+    z-index: 2;
+  }
+
+  /* 五、OUR WORK (manu2 + 圖) -------------------------------- */
+
+  #section05 .ourwork_menu .menu-item {
+    display: inline-block;
+  }
+
+  #section05 .ourwork_menu .menu-item span {
+    font-size: 14px;
+  }
+
+  #section05 .ourwork_menu .menu-item:nth-child(1) {
+    background: #e74c3c;
+  }
+
+  #section05 .ourwork_menu .menu-item:nth-child(1) a {
+    color: white;
+  }
+
+  #section05 .ourwork_menu a {
+    color: gray;
+    text-decoration: none;
+    font-size: 1.2rem;
+    display: block;
+    padding: 1rem;
+  }
+
+  #section05 .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    overflow: hidden;
+    box-sizing: border-box;
+  }
+
+  #section05 .col {
+    width: 25%;
+  }
+
+  /* 六、WHY CHOOSE US (介紹 + icon) */
+  #section06 {
+    background-image: url(../images/why-choose-bg.jpg);
+    background-repeat: no-repeat;
+    overflow: hidden;
+    display: inline-block;
+    width: 100%;
+    position: relative;
+    z-index: 0;
+  }
+
+  #section06::before {
+    content: '';
+    width: 60%;
+    height: 80%;
+    position: absolute;
+    top: 0;
+    right: -10%;
+    opacity: 90%;
+    background: #e74c3c;
+    box-sizing: border-box;
+    border-top: 1026px solid rgba(231, 76, 60, 0.90);
+    border-bottom: 0px solid rgba(231, 76, 60, 0.90);
+    border-left: 0px solid transparent;
+    border-right: 260px solid transparent;
+    -webkit-transform: skew(-15deg);
+  }
+
+
+  #section06 .container {
+    width: 1200px;
+    margin: 60px auto;
+    padding: 30px;
+    display: flex;
+    /* background: lightgreen; */
+    z-index: 1;
+  }
+
+  #section06 .row {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+  }
+
+  #section06 .why_choose_us_textbox {
+    width: 100%;
+    height: 750px;
+    -webkit-transform: skew(-15deg);
+    position: relative;
+    left: 10%;
+    /* background: lightsalmon; */
+    color: white;
+  }
+
+  #section06 .why_choose_us_textbox h1 {
+    width: 100%;
+    text-align: left;
+    margin: 40px 50%;
+    font-size: 48px;
+    text-transform: uppercase;
+    -webkit-transform: skew(15deg);
+  }
+
+  #section06 .col {
+    width: 100%;
+    height: 20%;
+    position: relative;
+    /* background: rgba(238, 130, 238, 0.489); */
+  }
+
+  #section06 .card {
+    width: 100%;
+
+    padding: 30px 0px;
+
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    /* background: rgba(135, 238, 130, 0.489); */
+  }
+
+  #section06 .circular {
+    -webkit-transform: skew(15deg);
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    z-index: 2;
+  }
+
+
+
+
+
+
+}
