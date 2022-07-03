@@ -1,0 +1,26 @@
+unset => 移除屬性
+
+:nth-child()::after => 可以兩個接在一起同時使用
+
+border-bottom 填色 :
+https://developer.mozilla.org/zh-CN/docs/Web/CSS/border-bottom
+
+margin 負值 :
+https://tw511.com/a/01/22940.html
+https://codertw.com/%E5%89%8D%E7%AB%AF%E9%96%8B%E7%99%BC/182436/
+
+
+transform-origin + transform: scale() +clip-path 運用 ↓
+
+clip-path 切割形狀
+https://www.oxxostudio.tw/articles/201503/css-clip-path.html
+
+transform-origin
+https://developer.mozilla.org/zh-TW/docs/Web/CSS/transform-origin
+
+transform: scale()
+https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/scale
+
+CSS文字鏤空與遮罩效果
+https://timchen0607.medium.com/css%E6%96%87%E5%AD%97%E9%8F%A4%E7%A9%BA%E8%88%87%E9%81%AE%E7%BD%A9-94bd5834674a
+
