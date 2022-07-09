@@ -196,12 +196,11 @@ a {
 
 #navbarbtn {
   width: 100%;
-  height: 70px;
   z-index: 1;
-  /* background: rgba(37, 64, 104, 1); */
 }
 
 #navbarbtn i {
+  display: inline;
   position: absolute;
   top: 30%;
   right: 5%;
@@ -234,6 +233,7 @@ input[type=checkbox]:checked+div {
   padding: 3% 0;
   overflow: hidden;
   background: #e74c3c;
+
   position: absolute;
   top: 80%;
   left: 0;
@@ -253,6 +253,8 @@ input[type=checkbox]:checked+div::before {
 
   position: absolute;
   left: 5%;
+
+  display: block;
 }
 
 input {
@@ -272,6 +274,14 @@ input {
   color: black;
   animation: animate 1.5s linear infinite;
   transition: 1s;
+}
+
+.toggle-box button:nth-child(1) ul {
+  display: none;
+}
+
+.toggle-box button:nth-child(7) ul {
+  display: none;
 }
 
 .toggle-box span {
@@ -1128,6 +1138,578 @@ input {
   font-weight: 300;
 }
 
+/* 十二、LATEST POSTS */
+#section12 .container {
+  width: 60%;
+}
+
+#section12 h1 {
+  font-size: 40px;
+  text-align: center;
+  color: rgb(75, 75, 75);
+  margin: 18% 0;
+}
+
+#section12 .row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#section12 .col {
+  display: flex;
+  justify-content: center;
+  align-items: top;
+  margin: 10px;
+}
+
+#section12 .col:nth-child(2) {
+  display: none;
+}
+
+#section12 .col:nth-child(3) {
+  display: none;
+}
+
+#section12 .col .left_item {
+  display: none;
+  width: 65px;
+  text-align: center;
+  color: #fff;
+}
+
+#section12 .col .left_item .word {
+  width: 65px;
+  height: 115px;
+  display: inline-block;
+  background: #e74c3c;
+}
+
+#section12 .col .left_item .word hr {
+  width: 50px;
+  color: #fff;
+}
+
+#section12 .col .left_item .word h2 {
+  font-size: 28px;
+  margin: 12px 0;
+  background: #e74c3c;
+}
+
+#section12 .col .left_item .word h3 {
+  font-size: 20px;
+  font-weight: 500;
+  margin: 16px 0;
+  background: #e74c3c;
+}
+
+#section12 .col .left_item i {
+  width: 65px;
+  height: 60px;
+  font-size: 26px;
+  margin: 5px auto;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #e74c3c;
+}
+
+#section12 .col .card {
+  margin: 0 10px;
+}
+
+#section12 .col .card img {
+  width: 100%;
+}
+
+#section12 .col .text_title {
+  color: rgb(75, 75, 75);
+}
+
+#section12 .col .card h2 {
+  font-size: 16px;
+  text-align: left;
+  word-wrap: break-word;
+}
+
+#section12 .col .card h3 {
+  font-size: 15px;
+  font-weight: 500;
+  text-align: left;
+  display: inline;
+  color: rgb(100, 100, 100);
+  margin: 2px 0;
+}
+
+#section12 .col .card h3:nth-child(2) {
+  display: block;
+}
+
+#section12 .col .card h4 {
+  width: 150px;
+  height: 40px;
+  font-size: 15px;
+  font-weight: 400;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 20px;
+  background-color: rgb(240, 240, 240);
+  color: rgb(100, 100, 100);
+  margin: 50px 0;
+}
+
+#section12 .col .card h4:hover {}
+
+#section12 .col .card i {
+  font-size: 16px;
+  color: #e74c3c;
+}
+
+#section12 .col .card p {
+  font-size: 15px;
+  font-weight: 400;
+  text-align: left;
+  line-height: 20px;
+  color: rgb(100, 100, 100);
+  margin-top: 35px;
+}
+
+#section12 .col .card a {
+  text-decoration: none;
+}
+
+/* 十三、WHAT CLIENTS SAY */
+#section13 .container {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+#section13 h1 {
+  font-size: 46px;
+  text-align: center;
+  color: rgb(75, 75, 75);
+  margin: 10% 0 20% 0;
+}
+
+#section13 .col {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  z-index: 3;
+}
+
+/* .col:nth-child(1) 是=> <h1>WHAT CLIENTS SAY</h1> */
+#section13 .col:nth-child(2) {
+  width: 100%;
+  height: 700px;
+  background: url(../images/client-big-1-tablet.jpg) no-repeat;
+  background-size: 100% auto;
+  background-position: top center;
+  transform-origin: top;
+  /* 左上 右上 右下 左下 */
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 90%);
+  z-index: 2;
+}
+
+#section13 .col:nth-child(2):hover {
+  height: 900px;
+  transition: 3s;
+}
+
+#section13 .col:nth-child(3) {
+  width: 100%;
+  height: 400px;
+  background: url(../images/client-2-tablet.jpg) no-repeat;
+  background-size: 100% auto;
+  background-position: top center;
+  transform-origin: top;
+  clip-path: polygon(0% 0%, 100% 10%, 100% 90%, 0% 100%);
+  margin-top: -500px;
+  z-index: 3;
+}
+
+#section13 .col:nth-child(3):hover {
+  margin-top: -450px;
+  height: 500px;
+  transition: 3s;
+}
+
+#section13 .col:nth-child(4) {
+  width: 100%;
+  height: 300px;
+  background: url(../images/client-big-3-tablet.jpg) no-repeat;
+  background-size: 100% auto;
+  background-position: center center;
+  transform-origin: top;
+  clip-path: polygon(0% 10%, 100% 0%, 100% 100%, 0% 100%);
+  margin-top: -50px;
+  z-index: 2;
+}
+
+#section13 .col:nth-child(4):hover {
+  margin-top: -50px;
+  height: 500px;
+  transition: 3s;
+}
+
+#section13 .col:hover .text_AneDoe {
+  opacity: 1;
+}
+
+#section13 .card .text_AneDoe {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%);
+  width: 80%;
+  /* pointer-events => 無法進行點擊或 hover 動作 */
+  pointer-events: none;
+  text-align: center;
+
+  opacity: 0;
+}
+
+#section13 .card .text_AneDoe h1 {
+  font-size: 40px;
+  color: #fff;
+}
+
+#section13 .card .text_AneDoe p {
+  font-size: 20px;
+  font-weight: 400;
+  margin: 5%;
+  color: #fff;
+}
+
+/* 十四、DESIGN TO BRAG ABOUT */
+#section14 {
+  display: none;
+}
+
+/* 十五、平台選單 (g+ t f v ...) */
+#section15 {
+  background: lightblue;
+}
+
+#section15 .container {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+#section15 .col {
+  display: flex;
+}
+
+#section15 .col .link_icon {
+  width: 12.5%;
+  height: 100%;
+  /* background: rgb(26, 48, 87); */
+}
+
+#section15 .col .link_icon a {
+  width: 100%;
+  height: 100%;
+  padding: 30px 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  text-decoration: none;
+}
+
+#section15 .col .link_icon i {
+  font-size: 30px;
+  color: #fff;
+}
+
+#section15 .col .link_icon:nth-child(1) a {
+  background: rgb(32, 41, 54);
+}
+
+#section15 .col .link_icon:nth-child(2) a {
+  background: rgb(55, 85, 93);
+}
+
+#section15 .col .link_icon:nth-child(3) a {
+  background: rgb(0, 73, 176);
+}
+
+#section15 .col .link_icon:nth-child(4) a {
+  background: rgb(93, 158, 255);
+}
+
+#section15 .col .link_icon:nth-child(5) a {
+  background: rgb(69, 209, 255);
+}
+
+#section15 .col .link_icon:nth-child(6) a {
+  background: rgb(255, 163, 34);
+}
+
+#section15 .col .link_icon:nth-child(7) a {
+  background: rgb(227, 29, 92);
+}
+
+#section15 .col .link_icon:nth-child(8) a {
+  background: rgb(242, 49, 31);
+}
+
+/* 十五、平台選單 (g+ t f v ...) */
+#section15 .col .link_icon a {
+  width: 100%;
+  height: 100%;
+  padding: 30px 0;
+}
+
+#section15 .col .link_icon i {
+  font-size: 30px;
+}
+
+/* 十六、google */
+#section16 .container {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#section16 .col iframe {
+  width: 100%;
+  height: 800px;
+  vertical-align: middle;
+}
+
+/* 十七、開始項目 + 發送消息 */
+#section17 {
+  overflow: hidden;
+}
+
+#section17 .container {
+  width: 100%;
+  padding: 0;
+  background: linear-gradient(100deg, #e74c3c 50%, #fff 50%);
+}
+
+#section17 .row {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  box-sizing: border-box;
+  -webkit-transform: skew(-10deg);
+}
+
+#section17 .col {
+  position: relative;
+  width: 80%;
+  height: 100%;
+}
+
+/* 左區塊 */
+#section17 .col .card_left {
+  width: 130%;
+  height: 600px;
+  background: #e74c3c;
+}
+
+#section17 .col .text_letsgo {
+  /* background: blue; */
+  width: 90%;
+  text-align: right;
+
+  position: absolute;
+  top: 25%;
+  right: 3%;
+
+  z-index: 1;
+}
+
+/* 右區塊 */
+#section17 .col .card_right {
+  background: #fff;
+
+  width: 130%;
+  height: 600px;
+}
+
+#section17 .col .text_tullus {
+  /* background: red; */
+  width: 90%;
+  text-align: left;
+
+  position: absolute;
+  top: 25%;
+  left: 3%;
+}
+
+/* 左區塊文字 + 按鈕 */
+#section17 .col .card_left p {
+  display: none;
+}
+
+#section17 .col .card_left h1 {
+  font-size: 38px;
+  font-weight: bolder;
+  color: #fff;
+  text-align: right;
+  margin: 10px 20px;
+  -webkit-transform: skew(10deg);
+}
+
+#section17 .col .card_left button {
+  width: 180px;
+  height: 90px;
+  font-size: 20px;
+  background: #fff;
+  color: #e74c3c;
+  border: none;
+  margin: 20px 20px;
+}
+
+/* 右區塊文字 + 按鈕 */
+#section17 .col .card_right p {
+  display: none;
+}
+
+#section17 .col .card_right h1 {
+  font-size: 38px;
+  font-weight: bolder;
+  text-align: left;
+  color: rgb(60, 60, 60);
+  margin: 10px 20px;
+  -webkit-transform: skew(10deg);
+}
+
+#section17 .col .card_right button {
+  width: 180px;
+  height: 90px;
+  font-size: 20px;
+  background: rgb(60, 60, 60);
+  color: #fff;
+  border: none;
+  margin: 20px 20px;
+}
+
+/* 十八、footer */
+#section18 {
+  background: rgb(50, 50, 50);
+  width: 100%;
+}
+
+#section18 .container {
+  width: 80%;
+  margin: auto;
+  padding: 0;
+}
+
+#section18 .container .row {
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#section18 .row .col {
+  width: 50%;
+
+  display: flex;
+  /* align-items: center; */
+}
+
+#section18 .row .col:nth-child(1) {
+  margin-top: 20px;
+}
+
+#section18 .row .col:nth-child(2) {
+  display: flex;
+  flex-direction: row-reverse;
+  margin-right: 0;
+  margin-top: 20px;
+}
+
+#section18 .row .col:nth-child(3) {
+  width: 65%;
+}
+
+#section18 .row .col:nth-child(4) {
+  width: 35%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+#section18 .row .col .icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  color: #fff;
+  font-size: 20px;
+  margin: 10px;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#section18 .row .col .footer_text {
+  color: #fff;
+  line-height: 6px;
+  margin: 10px 0;
+}
+
+#section18 .col .footer_text h3 {
+  font-weight: 500;
+  font-size: 12px;
+}
+
+#section18 .col .footer_text p {
+  font-weight: 300;
+  font-size: 12px;
+}
+
+#section18 .row .col:nth-child(3) p {
+  font-size: 12px;
+  text-align: left;
+}
+
+#section18 .row .col:nth-child(4) h1 {
+  color: #e74c3c;
+  font-size: 40px;
+  font-weight: 300;
+  margin: 0 0px 30px 0;
+}
+
+#section18 .row .col:nth-child(4) h2 {
+  color: #fff;
+  font-size: 18px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1635,7 +2217,7 @@ input {
     -webkit-transform: rotate(-5deg);
     transform-origin: center;
 
-    margin-top: -100px;
+    margin-top: -120px;
   }
 
   #section08 .col_bg4:before {
@@ -1870,14 +2452,242 @@ input {
   /* 跟最小尺寸一樣 */
 
 
+  /* 十二、LATEST POSTS */
+  #section12 .container {
+    width: 80%;
+  }
 
+  #section12 h1 {
+    font-size: 54px;
+    font-weight: bolder;
+    text-align: center;
+    color: rgb(75, 75, 75);
+    margin: 10% 0;
+  }
 
+  #section12 .col:nth-child(2) {
+    display: flex;
+  }
 
+  #section12 .col:nth-child(3) {
+    display: none;
+  }
 
+  /* 十三、WHAT CLIENTS SAY */
+  #section13 .container {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+
+  #section13 h1 {
+    font-size: 46px;
+    text-align: center;
+    color: rgb(75, 75, 75);
+    margin: 10% 0;
+  }
+
+  #section13 .col {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    z-index: 3;
+  }
+
+  /* .col:nth-child(1) 是=> <h1>WHAT CLIENTS SAY</h1> */
+  #section13 .col:nth-child(2) {
+    width: 100%;
+    height: 700px;
+    background: url(../images/client-big-1-tablet.jpg) no-repeat;
+    background-size: 100% auto;
+    background-position: top center;
+    transform-origin: top;
+    /* 左上 右上 右下 左下 */
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 90%);
+    z-index: 2;
+  }
+
+  #section13 .col:nth-child(2):hover {
+    height: 1200px;
+    transition: 3s;
+  }
+
+  #section13 .col:nth-child(3) {
+    width: 100%;
+    height: 400px;
+    background: url(../images/client-2-tablet.jpg) no-repeat;
+    background-size: 100% auto;
+    background-position: top center;
+    transform-origin: top;
+    clip-path: polygon(0% 0%, 100% 10%, 100% 90%, 0% 100%);
+    margin-top: -500px;
+    z-index: 3;
+  }
+
+  #section13 .col:nth-child(3):hover {
+    margin-top: -300px;
+    height: 650px;
+    transition: 3s;
+  }
+
+  #section13 .col:nth-child(4) {
+    width: 100%;
+    height: 400px;
+    background: url(../images/client-big-3-tablet.jpg) no-repeat;
+    background-size: 100% auto;
+    background-position: center center;
+    transform-origin: top;
+    clip-path: polygon(0% 10%, 100% 0%, 100% 100%, 0% 100%);
+    margin-top: -80px;
+    z-index: 2;
+  }
+
+  #section13 .col:nth-child(4):hover {
+    margin-top: -70px;
+    height: 600px;
+    transition: 3s;
+  }
+
+  #section13 .col:hover .text_AneDoe {
+    opacity: 1;
+  }
+
+  #section13 .card .text_AneDoe {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%);
+    width: 80%;
+    /* pointer-events => 無法進行點擊或 hover 動作 */
+    pointer-events: none;
+    text-align: center;
+
+    opacity: 0;
+  }
+
+  #section13 .card .text_AneDoe h1 {
+    font-size: 55px;
+    color: #fff;
+    margin: 0;
+  }
+
+  #section13 .card .text_AneDoe p {
+    font-size: 26px;
+    font-weight: 400;
+    margin: 5%;
+    color: #fff;
+  }
+
+  /* 十七、開始項目 + 發送消息 */
+  #section17 .row {
+    width: 120%;
+    position: relative;
+    left: -10%;
+  }
+
+  /* 左區塊文字 + 按鈕 */
+  #section17 .col .card_left p {
+    display: none;
+  }
+
+  #section17 .col .card_left h1 {
+    font-size: 58px;
+    font-weight: bolder;
+    color: #fff;
+    text-align: right;
+    margin: 10px 30px;
+    -webkit-transform: skew(10deg);
+  }
+
+  #section17 .col .card_left button {
+    width: 200px;
+    height: 90px;
+    font-size: 20px;
+    background: #fff;
+    color: #e74c3c;
+    border: none;
+    margin: 20px 40px;
+  }
+
+  /* 右區塊文字 + 按鈕 */
+  #section17 .col .card_right p {
+    display: none;
+  }
+
+  #section17 .col .card_right h1 {
+    font-size: 58px;
+    font-weight: bolder;
+    text-align: left;
+    color: rgb(60, 60, 60);
+    margin: 10px 30px;
+    -webkit-transform: skew(10deg);
+  }
+
+  #section17 .col .card_right button {
+    width: 200px;
+    height: 90px;
+    font-size: 20px;
+    background: rgb(60, 60, 60);
+    color: #fff;
+    border: none;
+    margin: 20px 40px;
+  }
+
+  /* 十八、footer */
+  #section18 .container .row {
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  #section18 .row .col {
+    display: flex;
+  }
+
+  #section18 .row .col:nth-child(1) {
+    width: 32%;
+    margin-top: 20px;
+  }
+
+  #section18 .row .col:nth-child(2) {
+    width: 28%;
+    display: flex;
+    flex-direction: row;
+    margin-left: 0;
+    margin-top: 20px;
+  }
+
+  #section18 .row .col:nth-child(3) {
+    width: 40%;
+    margin-top: 25px;
+  }
+
+  #section18 .row .col:nth-child(4) {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
 
 
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1957,9 +2767,136 @@ input {
     height: 1.5rem;
   }
 
+  /* --- 二、header navbar section02 導覽列 + 選單列表 ------------- */
+  #navbarbtn {
+    width: 100%;
+    height: 100px;
+    margin: 0;
+    padding: 0;
+
+    position: relative;
+    top: 0;
+    left: 55%;
+    right: 0;
+    z-index: 1;
+    /* background: rgb(51, 87, 141); */
+  }
+
+  #navbarbtn i {
+    display: none;
+  }
+
+  /* /最大尺寸屬性重置/ */
+  input[type=checkbox]:checked+div {
+    max-height: unset;
+    display: block;
+  }
+
+  .toggle-box {
+    /* display: flex; */
+    /* justify-content: stretch;
+    align-items: stretch; */
+
+    padding: 0;
+    overflow: unset;
+    /* background: rgb(105, 255, 68); */
+
+    position: unset;
+    z-index: 3;
+  }
+
+  .toggle-box::before {
+    display: none;
+  }
+
+  .toggle-box button {
+    width: 10.5%;
+    height: 100px;
+    margin: 0 10px;
+    border: none;
+    color: white;
+    cursor: pointer;
+    /* background: rgb(90, 199, 205); */
+  }
+
+  .toggle-box button:hover {
+    color: #fff;
+  }
+
+  .toggle-box button:nth-child(1) {
+    position: relative;
+  }
+
+  /* ul => HOME */
+  .toggle-box button:nth-child(1) ul {
+    display: block;
+    width: 100px;
+    line-height: 40px;
+    font-weight: bold;
+    text-align: left;
+    list-style: none;
+
+    position: absolute;
+    /* 會位移到 HOM 的下面 */
+    top: 100%;
+    left: 0;
+    padding: 10px 30px;
+
+    background: #e74c3c;
+    opacity: 0;
+  }
+
+  .toggle-box button:nth-child(1):hover ul {
+    opacity: 1;
+  }
+
+  .toggle-box li:hover {
+    color: black;
+    animation: animate 1.5s linear infinite;
+    transition: 1s;
+  }
+
+  .toggle-box button:nth-child(1) li:nth-child(1) {
+    color: black;
+  }
+
+  .toggle-box button:nth-child(7) {
+    position: relative;
+  }
+
+  /* ul => PAGES */
+  .toggle-box button:nth-child(7) ul {
+    display: block;
+    width: 100px;
+    line-height: 40px;
+    font-weight: bold;
+    text-align: left;
+    list-style: none;
+
+    position: absolute;
+    /* 會位移到 PAGES 的下面 */
+    top: 100%;
+    right: 0;
+    padding: 10px 30px;
+
+    background: #e74c3c;
+    opacity: 0;
+  }
+
+  .toggle-box button:nth-child(7):hover ul {
+    opacity: 1;
+  }
+
+  .toggle-box span {
+    line-height: 100px;
+    font-size: 100%;
+    font-weight: bold;
+    position: unset;
+    /* background: rgba(105, 90, 205, 0.418); */
+  }
+
 
   /* --- 三、SERVICES 服務介紹 (圈圈設計版型 + icon) ------------- */
-
   #section03 {
     /* background: rgba(255, 220, 22, 0.5); */
     position: relative;
@@ -2677,9 +3614,9 @@ input {
     border-top: 0px solid transparent;
     border-bottom: 810px solid rgba(231, 76, 68, 0.9);
     border-left: 0px solid transparent;
-    border-right: 130px solid transparent;
+    border-right: 145px solid transparent;
 
-    -webkit-transform: rotate(5deg);
+    -webkit-transform: rotate(4.5deg);
     transform-origin: center;
     position: absolute;
     top: 4.5%;
@@ -2993,8 +3930,474 @@ input {
     display: inline-block;
   }
 
+  /* 十二、LATEST POSTS */
+  #section12 .container {
+    width: 80%;
+  }
+
+  #section12 h1 {
+    font-size: 58px;
+    text-align: center;
+    color: rgb(75, 75, 75);
+    margin: 5% 0 3% 0;
+  }
+
+  #section12 .row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #section12 .col {
+    display: flex;
+    margin: 10px;
+  }
+
+  #section12 .col:nth-child(3) {
+    display: flex;
+    margin: 10px;
+  }
+
+  #section12 .col .left_item {
+    display: inline-block;
+    width: 65px;
+    text-align: center;
+    color: #fff;
+  }
+
+  #section12 .col .left_item .word {
+    width: 65px;
+    height: 115px;
+    display: inline-block;
+    background: #e74c3c;
+  }
+
+  #section12 .col .left_item .word hr {
+    width: 50px;
+    color: #fff;
+  }
+
+  #section12 .col .left_item .word h2 {
+    font-size: 28px;
+    margin: 12px 0;
+    background: #e74c3c;
+  }
+
+  #section12 .col .left_item .word h3 {
+    font-size: 20px;
+    font-weight: 500;
+    margin: 16px 0;
+    background: #e74c3c;
+  }
+
+  #section12 .col .left_item i {
+    width: 65px;
+    height: 60px;
+    font-size: 26px;
+    margin: 5px auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #e74c3c;
+  }
+
+  #section12 .col .card {
+    margin: 0 10px;
+  }
+
+  #section12 .col .card img {
+    width: 100%;
+  }
+
+  #section12 .col .text_title {
+    color: rgb(75, 75, 75);
+  }
+
+  #section12 .col .card h2 {
+    font-size: 16px;
+    text-align: left;
+    word-wrap: break-word;
+  }
+
+  #section12 .col .card h3 {
+    font-size: 15px;
+    font-weight: 500;
+    text-align: left;
+    display: inline;
+    color: rgb(100, 100, 100);
+    margin: 2px 0;
+  }
+
+  #section12 .col .card h3:nth-child(2) {
+    display: block;
+  }
+
+  #section12 .col .card h4 {
+    width: 150px;
+    height: 40px;
+    font-size: 15px;
+    font-weight: 400;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 20px;
+    background-color: rgb(240, 240, 240);
+    color: rgb(100, 100, 100);
+    margin: 50px 0;
+  }
+
+  #section12 .col .card i {
+    font-size: 16px;
+    color: #e74c3c;
+  }
+
+  #section12 .col .card p {
+    font-size: 15px;
+    font-weight: 400;
+    text-align: left;
+    line-height: 20px;
+    color: rgb(100, 100, 100);
+    margin-top: 35px;
+  }
+
+  #section12 .col .card a {
+    text-decoration: none;
+  }
+
+  /* 十三、WHAT CLIENTS SAY */
+  #section13 .container {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+
+  #section13 h1 {
+    font-size: 60px;
+    text-align: center;
+    color: rgb(75, 75, 75);
+    margin: 5% 0;
+  }
+
+  #section13 .col {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    z-index: 3;
+  }
+
+  /* .col:nth-child(1) 是=> <h1>WHAT CLIENTS SAY</h1> */
+  #section13 .col:nth-child(2) {
+    width: 100%;
+    height: 700px;
+    background: url(../images/client-big-1.jpg) no-repeat;
+    background-size: 100% auto;
+    background-position: top center;
+    transform-origin: top;
+    /* 左上 右上 右下 左下 */
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 90%);
+    z-index: 2;
+  }
+
+  #section13 .col:nth-child(2):hover {
+    height: 1100px;
+    transition: 3s;
+  }
+
+  #section13 .col:nth-child(3) {
+    width: 100%;
+    height: 700px;
+    background: url(../images/client-big-2.jpg) no-repeat;
+    background-size: 100% auto;
+    background-position: top center;
+    transform-origin: top;
+    clip-path: polygon(0% 0%, 100% 10%, 100% 90%, 0% 100%);
+    margin-top: -400px;
+    z-index: 3;
+  }
+
+  #section13 .col:nth-child(3):hover {
+    margin-top: -300px;
+    height: 850px;
+    transition: 3s;
+  }
+
+  #section13 .col:nth-child(4) {
+    width: 100%;
+    height: 700px;
+    background: url(../images/client-big-3.jpg) no-repeat;
+    background-size: 100% auto;
+    background-position: center center;
+    transform-origin: top;
+    clip-path: polygon(0% 10%, 100% 0%, 100% 100%, 0% 100%);
+    margin-top: -180px;
+    z-index: 2;
+  }
+
+  #section13 .col:nth-child(4):hover {
+    margin-top: -100px;
+    height: 800px;
+    transition: 3s;
+  }
+
+  #section13 .col:hover .text_AneDoe {
+    opacity: 1;
+  }
+
+  #section13 .card .text_AneDoe {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%);
+    width: 70%;
+    /* pointer-events => 無法進行點擊或 hover 動作 */
+    pointer-events: none;
+    text-align: center;
+
+    opacity: 0;
+  }
+
+  #section13 .card .text_AneDoe h1 {
+    font-size: 68px;
+    color: #fff;
+    margin: 0;
+  }
+
+  #section13 .card .text_AneDoe p {
+    font-size: 28px;
+    font-weight: 400;
+    color: #fff;
+  }
+
+  /* 十四、DESIGN TO BRAG ABOUT */
+  #section14 {
+    display: inline-block;
+    width: 100%;
+    overflow: visible;
+  }
+
+  #section14 .container {
+    width: 90%;
+    padding: 0;
+    margin: auto;
+  }
+
+  #section14 .row {
+    width: 100%;
+    height: 800px;
+    position: relative;
+    top: -60px;
+    z-index: 5;
+    /* background: lightblue; */
+  }
+
+  #section14 .col .card .text_left {
+    width: 50%;
+    position: relative;
+  }
+
+  #section14 .col .card .text_left h1 {
+    width: 60%;
+    text-align: right;
+    color: #e74c3c;
+    font-size: 70px;
+    font-weight: 800;
+    position: absolute;
+    right: 25px;
+    top: 120px;
+    /* background: cornflowerblue; */
+  }
+
+  #section14 .col .card .text_left p {
+    width: 70%;
+    line-height: 30px;
+    text-align: left;
+    color: gray;
+    font-size: 18px;
+    font-weight: 400;
+    position: absolute;
+    right: 0;
+    top: 400px;
+    /* background: lightblue; */
+  }
+
+  #section14 .col .card img {
+    width: 50%;
+    position: absolute;
+    top: 0px;
+    right: 0;
+    /* background: purple; */
+  }
+
+  /* 十五、平台選單 (g+ t f v ...) */
+  #section15 .col .link_icon a {
+    width: 100%;
+    height: 100%;
+    padding: 70px 0;
+  }
+
+  #section15 .col .link_icon i {
+    font-size: 80px;
+  }
 
 
+  /* 十七、開始項目 + 發送消息 */
+  #section17 {
+    overflow: hidden;
+  }
+
+  #section17 .row {
+    width: 110%;
+    position: relative;
+    left: -5%;
+
+    display: flex;
+    box-sizing: border-box;
+    -webkit-transform: skew(-10deg);
+    background: lightblue;
+  }
+
+  /* 左區塊 */
+  #section17 .col .card_left {
+    background: #e74c3c;
+    width: 100%;
+    height: 600px;
+  }
+
+  #section17 .col .text_letsgo {
+    /* background: blue; */
+    width: 80%;
+    text-align: right;
+
+    position: absolute;
+    top: 25%;
+    right: 3%;
+
+    z-index: 1;
+  }
+
+  /* 右區塊 */
+  #section17 .col .card_right {
+    background: #fff;
+
+    width: 100%;
+    height: 600px;
+  }
+
+  #section17 .col .text_tullus {
+    /* background: red; */
+    width: 80%;
+    text-align: left;
+
+    position: absolute;
+    top: 25%;
+    left: 3%;
+  }
+
+  /* 左區塊文字 + 按鈕 */
+  #section17 .col .card_left p {
+    display: block;
+    color: #fff;
+    font-size: 18px;
+    margin: 30px;
+    -webkit-transform: skew(10deg);
+  }
+
+  #section17 .col .card_left h1 {
+    font-size: 58px;
+    font-weight: bolder;
+    color: #fff;
+    text-align: right;
+    margin: 10px 30px;
+    -webkit-transform: skew(10deg);
+  }
+
+  #section17 .col .card_left button {
+    width: 200px;
+    height: 90px;
+    font-size: 20px;
+    background: #fff;
+    color: #e74c3c;
+    border: none;
+    margin: 20px 40px;
+  }
+
+  /* 右區塊文字 + 按鈕 */
+  #section17 .col .card_right p {
+    display: block;
+    color: rgb(60, 60, 60);
+    font-size: 18px;
+    margin: 30px;
+    -webkit-transform: skew(10deg);
+  }
+
+  #section17 .col .card_right h1 {
+    font-size: 58px;
+    font-weight: bolder;
+    text-align: left;
+    color: rgb(60, 60, 60);
+    margin: 10px 30px;
+    -webkit-transform: skew(10deg);
+  }
+
+  #section17 .col .card_right button {
+    width: 200px;
+    height: 90px;
+    font-size: 20px;
+    background: rgb(60, 60, 60);
+    color: #fff;
+    border: none;
+    margin: 20px 40px;
+  }
+
+  /* 十八、footer */
+  #section18 .container .row {
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  #section18 .row .col {
+    display: flex;
+  }
+
+  #section18 .row .col:nth-child(1) {
+    width: 25%;
+    margin: 20px 0;
+  }
+
+  #section18 .row .col:nth-child(2) {
+    width: 25%;
+    display: flex;
+    flex-direction: row;
+    margin-left: 0;
+    margin: 20px 0;
+  }
+
+  #section18 .row .col:nth-child(3) {
+    width: 30%;
+    margin-top: 30px;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  #section18 .row .col:nth-child(4) {
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #section18 .row .col:nth-child(4) h1 {
+    color: #e74c3c;
+    font-size: 40px;
+    font-weight: 300;
+    margin: 0 10px 5px 0;
+  }
+
+  #section18 .row .col:nth-child(4) h2 {
+    color: #fff;
+    font-size: 18px;
+  }
 
 
 

@@ -31,12 +31,12 @@
       <div class="container">
         <!-- 大圖 -->
         <!-- 使用 object-fit 可以跟 background:url(圖片)效果差不多 -->
-        <img class="img1 object-fit" src="./images/slide1.jpg" id="a">
-        <img class="img2 object-fit" src="./images/slide2.jpg">
+        <!-- <img class="img1 object-fit" src="./images/slide1.jpg" id="a">
+        <img class="img2 object-fit" src="./images/slide2.jpg"> -->
         <!-- 設定 點選左右箭頭  object-fit 圖片 display:none 開啟關閉    -->
         <!-- 左右箭頭點選 -->
-        <button class="leftbtn"><img src="./images/prev.png"></button>
-        <button class="rightbtn"><img src="./images/next.png"></button>
+        <button class="leftbtn" id="prev"><img src="./images/prev.png"></button>
+        <button class="rightbtn" id="next"><img src="./images/next.png"></button>
 
         <!-- 圓形置中字 -->
         <!-- 增加 span 設定圓形框  -->
@@ -88,17 +88,42 @@
         <!-- navbar 導覽列 + menu_list 選單列表 -->
         <div id="navbarbtn">
           <label for="toggle"><i class="fa-solid fa-bars"></i></label>
+          <!-- transition checked 狀態 -->
           <input type="checkbox" id="toggle" checked>
           <div class="toggle-box">
-            <a href="#a"><button><span>HOME</span></button></a>
-            <button><span>SERVICES</span></button>
-            <button><span>WORK</span></button>
-            <button><span>TEAM</span></button>
-            <button><span>BLOG</span></button>
-            <button><span>CONTACT</span></button>
-            <button><span>PAGES</span></button>
-            <button><span>BLOG</span></button>
-            <button><span>BLOG POST</span></button>
+            <button>
+              <span>HOME</span>
+              <!-- HOME 裡面點開內容 -->
+              <ul>
+                <li>HOME 1</li>
+                <li>HOME 2</li>
+                <li>HOME 3</li>
+              </ul>
+            </button>
+            <button>
+              <span>SERVICES</span>
+            </button>
+            <button>
+              <span>WORK</span>
+            </button>
+            <button>
+              <span>TEAM</span>
+            </button>
+            <button>
+              <span>BLOG</span>
+            </button>
+            <button>
+              <span>CONTACT</span>
+            </button>
+            <button>
+              <span>PAGES</span>
+              <!-- PAGES 裡面點開內容 -->
+              <ul>
+                <li>BLOG</li>
+                <li>BLOG POST</li>
+              </ul>
+            </button>
+
             <!-- ⭐後面未完成，記得回來增加點選連結 -->
           </div>
 
@@ -754,67 +779,82 @@
   <!-- 十二、LATEST POSTS  -->
   <div id="section12">
     <div class="container">
+
+      <h1>LATEST POSTS</h1>
+
       <div class="row">
-
-        <h1>LATEST POSTS</h1>
-
         <div class="col">
           <div class="left_item">
-            <h1>07</h1>
-            <h2>MAY</h2>
+            <div class="word">
+              <h2>07</h2>
+              <hr>
+              <h3>MAY</h3>
+            </div>
             <i class="fa-solid fa-heart"></i>
-            <!-- 補 2 個 icon -->
+            <i class="fa-solid fa-comments"></i>
           </div>
 
           <div class="card">
             <img src="./images/image1.jpg">
-            <h1>A BEAUTIFUL VIEW</h1>
-            <p>NOVEMBER 21, 2013</p>
-            <a href="#"><p>| 5 COMMENTS |</p></a>
-            <i class="fa-solid fa-heart"></i>
-            <p>23</p>
-            <p>Vestibulum ac diam sit amet quam vehicu la elementum sed sit amet dui. Praesent sap ien massa, convallis a pellentesque nec, egestas non nisvamus.</p>
-            <a href="#"><p>READ MORE</p></a>
+            <div class="text_title">
+              <h2>A BEAUTIFUL VIEW</h2>
+              <h3>NOVEMBER 21, 2013</h3>
+              <a href="#"><h3>| 5 COMMENTS |</h3></a>
+              <i class="fa-solid fa-heart"></i>
+              <h3>23</h3>
+              <p>Vestibulum ac diam sit amet quam vehicu la elementum sed sit amet dui. Praesent sap ien massa, convallis a pellentesque nec, egestas non nisvamus.</p>
+              <a href="#"><h4>READ MORE</h4></a>
+            </div>
           </div>
         </div>
 
         <div class="col">
           <div class="left_item">
-            <h1>07</h1>
-            <h2>MAY</h2>
+            <div class="word">
+              <h2>07</h2>
+              <hr>
+              <h3>MAY</h3>
+            </div>
             <i class="fa-solid fa-heart"></i>
-            <!-- 補 2 個 icon -->
+            <i class="fa-solid fa-comments"></i>
           </div>
 
           <div class="card">
             <img src="./images/image2.jpg">
-            <h1>A BEAUTIFUL VIEW</h1>
-            <p>NOVEMBER 21, 2013</p>
-            <a href="#"><p>| 5 COMMENTS |</p></a>
-            <i class="fa-solid fa-heart"></i>
-            <p>23</p>
-            <p>Vestibulum ac diam sit amet quam vehicu la elementum sed sit amet dui. Praesent sap ien massa, convallis a pellentesque nec, egestas non nisvamus.</p>
-            <a href="#"><p>READ MORE</p></a>
+            <div class="text_title">
+              <h2>A BEAUTIFUL VIEW</h2>
+              <h3>NOVEMBER 21, 2013</h3>
+              <a href="#"><h3>| 5 COMMENTS |</h3></a>
+              <i class="fa-solid fa-heart"></i>
+              <h3>23</h3>
+              <p>Vestibulum ac diam sit amet quam vehicu la elementum sed sit amet dui. Praesent sap ien massa, convallis a pellentesque nec, egestas non nisvamus.</p>
+              <a href="#"><h4>READ MORE</h4></a>
+            </div>
           </div>
         </div>
 
         <div class="col">
           <div class="left_item">
-            <h1>07</h1>
-            <h2>MAY</h2>
+            <div class="word">
+              <h2>07</h2>
+              <hr>
+              <h3>MAY</h3>
+            </div>
             <i class="fa-solid fa-heart"></i>
-            <!-- 補 2 個 icon -->
+            <i class="fa-solid fa-comments"></i>
           </div>
 
           <div class="card">
             <img src="./images/image3.jpg">
-            <h1>A BEAUTIFUL VIEW</h1>
-            <p>NOVEMBER 21, 2013</p>
-            <a href="#"><p>| 5 COMMENTS |</p></a>
-            <i class="fa-solid fa-heart"></i>
-            <p>23</p>
-            <p>Vestibulum ac diam sit amet quam vehicu la elementum sed sit amet dui. Praesent sap ien massa, convallis a pellentesque nec, egestas non nisvamus.</p>
-            <a href="#"><p>READ MORE</p></a>
+            <div class="text_title">
+              <h2>A BEAUTIFUL VIEW</h2>
+              <h3>NOVEMBER 21, 2013</h3>
+              <a href="#"><h3>| 5 COMMENTS |</h3></a>
+              <i class="fa-solid fa-heart"></i>
+              <h3>23</h3>
+              <p>Vestibulum ac diam sit amet quam vehicu la elementum sed sit amet dui. Praesent sap ien massa, convallis a pellentesque nec, egestas non nisvamus.</p>
+              <a href="#"><h4>READ MORE</h4></a>
+            </div>
           </div>
         </div>
 
@@ -829,30 +869,35 @@
 
         <h1>WHAT CLIENTS SAY</h1>
 
-        <div class="col_AneDoe">
+        <div class="col">
+          <!-- <img src="./images/client-big-1.jpg"> -->
           <div class="card">
-            <!-- img 用 background-image: url() -->
-            <h1>"Werbi in velit ligula eget vulputate ligulaviv sollicitudin rcusante orbi in velit"</h1>
-            <p>by Ane Doe</p>
+            <div class="text_AneDoe">
+              <h1>"Werbi in velit ligula eget vulputate ligulaviv sollicitudin rcusante orbi in velit"</h1>
+              <p>by Ane Doe</p>
+            </div>
           </div>
         </div>
 
-        <div class="col_AneDoe">
+        <div class="col">
+          <!-- <img src="./images/client-big-2.jpg"> -->
           <div class="card">
-            <!-- img 用 background-image: url() -->
-            <h1>"Werbi in velit ligula eget vulputate ligulaviv sollicitudin rcusante orbi in velit"</h1>
-            <p>by Ane Doe</p>
+            <div class="text_AneDoe">
+              <h1>"Werbi in velit ligula eget vulputate ligulaviv sollicitudin rcusante orbi in velit"</h1>
+              <p>by Ane Doe</p>
+            </div>
           </div>
         </div>
 
-        <div class="col_AneDoe">
+        <div class="col">
+          <!-- <img src="./images/client-big-3.jpg"> -->
           <div class="card">
-            <!-- img 用 background-image: url() -->
-            <h1>"Werbi in velit ligula eget vulputate ligulaviv sollicitudin rcusante orbi in velit"</h1>
-            <p>by Ane Doe</p>
+            <div class="text_AneDoe">
+              <h1>"Werbi in velit ligula eget vulputate ligulaviv sollicitudin rcusante orbi in velit"</h1>
+              <p>by Ane Doe</p>
+            </div>
           </div>
         </div>
-
       </div>
     </div>
   </div>
@@ -863,9 +908,13 @@
       <div class="row">
 
         <div class="col">
-            <h1>DESIGN TO BRAG ABOUT</h1>
-            <p>Morbi in velit, eget vulputate ligula viverra, mi ae sollicitudin rhon roin gravida nibh vel velit auctor aliquet. Aeneanollic itudin lorem dumorbi in velit ligula, eget vulputate ligula viverra, mi ae sollicit rhoncusante roin gravida nibh vel velit auctor aliquetc</p>
+          <div class="card">
+            <div class="text_left">
+              <h1>DESIGN TO BRAG ABOUT</h1>
+              <p>Morbi in velit, eget vulputate ligula viverra, mi ae sollicitudin rhon roin gravida nibh vel velit auctor aliquet. Aeneanollic itudin lorem dumorbi in velit ligula, eget vulputate ligula viverra, mi ae sollicit rhoncusante roin gravida nibh vel velit auctor aliquetc</p>
+            </div>
             <img src="./images/about-imac.png">
+          </div>
         </div>
 
       </div>
@@ -879,7 +928,6 @@
 
         <div class="col">
           <div class="link_icon"><a href="#"><i class="fa-brands fa-google-plus-g"></i></a></div>
-          <div class="link_icon"><a href="#"><i class="fa-solid fa-circle-g"></i></a></div>
           <div class="link_icon"><a href="#"><i class="fa-solid fa-t"></i></a></div>
           <div class="link_icon"><a href="#"><i class="fa-brands fa-facebook-f"></i></a></div>
           <div class="link_icon"><a href="#"><i class="fa-brands fa-vimeo-v"></i></a></div>
@@ -894,6 +942,15 @@
   </div>
 
   <!-- 十六、google -->
+  <div id="section16">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29793.987515772864!2d105.81941115372538!3d21.022738699692077!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab9bd9861ca1%3A0xe7887f7b72ca17a9!2z6LaK5Y2X5rKz5YWn6YKE5YqN6YOh5rKz5YWn!5e0!3m2!1szh-TW!2stw!4v1657294161046!5m2!1szh-TW!2stw" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- 十七、開始項目 + 發送消息 -->
   <div id="section17">
@@ -901,18 +958,26 @@
       <div class="row">
 
         <div class="col">
-          <p>HAVE YOU FALLEN IN LOVE YET?</p>
-          <h1>START A PROJECT</h1>
-          <div class="button1">
-            <h2>LET'S GO</h2>
+          <div class="card_left">
+            <div class="text_letsgo">
+              <p>HAVE YOU FALLEN IN LOVE YET?</p>
+              <h1>START A PROJECT</h1>
+              <button>
+                <h2>LET'S GO</h2>
+              </button>
+            </div>
           </div>
         </div>
 
         <div class="col">
-          <p>WANT TO TELL US SOMETHING?</p>
-          <h1>START A PROJECT</h1>
-          <div class="button2">
-            <h2>LET'S GO</h2>
+          <div class="card_right">
+            <div class="text_tullus">
+              <p>WANT TO TELL US SOMETHING?</p>
+              <h1>SEND A MESSAGE</h1>
+              <button>
+                <h2>TULL US</h2>
+              </button>
+            </div>
           </div>
         </div>
 
@@ -922,14 +987,78 @@
 
 
   <!-- 十八、footer -->
-  <i class="fa-solid fa-envelope"></i>
-  <i class="fa-solid fa-mobile"></i>
+  <div id="section18">
+    <div class="container">
+      <div class="row">
+
+        <div class="col">
+          <div class="icon">
+            <i class="fa-solid fa-envelope"></i>
+          </div>
+          <div class="footer_text">
+            <h3>EMAIL</h3>
+            <p>email@example.com</p>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="icon">
+            <i class="fa-solid fa-mobile"></i>
+          </div>
+          <div class="footer_text">
+            <h3>PHONE</h3>
+            <p>(012)3456789</p>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="footer_text">
+            <p>Copyright © Master. All rights reserved.</p>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="footer_text"></div>
+            <h1> ↑ </h1>
+            <h2> Go on top</h2>
+          </div>
+        </div>
+
+      </div>
+    </div>
   </div>
 
 
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js'
+    integrity='sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=='
+    crossorigin='anonymous'></script>
 
   <script>
-    // 未完
+    // 切換圖片
+    // 用 true / false 判斷第一張和第二張圖片
+    let flag = true
+    // 抓到2個按鈕
+    // .on(事件名稱, function(){})
+    $("#prev,#next").on("click", function(){
+      console.log('ij');
+        if (flag) {
+          // .attr() 標籤屬性
+          // 括號裡第一個是放屬性名稱，如果有第二個的話，就是改值(第二張圖片)
+          // $('#a').attr("src","./images/slide2.jpg")
+          $('#section01').css("background","url('../images/slide2.jpg') no-repeat center/cover")
+
+          console.log('1');
+          flag = false
+        } else {
+          // $('#a').attr("src","./images/slide1.jpg")
+          $('#section01').css("background","url('../images/slide1.jpg') no-repeat center/cover")
+          flag = true
+          // 狀態要更改回來
+        }
+    })
+
+
+    // 滾輪滾動至頂 - 未完
     // onscroll事件
     // 當一個元素的滾動條被滾動出現的 onscroll事件
     // 使用CSS 溢出樣式屬性創建一個元素的滾動條
