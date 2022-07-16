@@ -2,6 +2,9 @@ unset => 移除屬性
 
 :nth-child()::after => 可以兩個接在一起同時使用
 
+sticky header
+https://chengfulin.github.io/posts/%E7%AD%86%E8%A8%98-CSS-sticky-header/
+
 border-bottom 填色 :
 https://developer.mozilla.org/zh-CN/docs/Web/CSS/border-bottom
 

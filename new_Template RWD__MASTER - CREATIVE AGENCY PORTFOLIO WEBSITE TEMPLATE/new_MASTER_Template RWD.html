@@ -23,10 +23,8 @@
 
 <body>
   <!-- 手機最小尺寸 -->
-  <div id="section" onscroll="myfunction()">
 
-    <!-- 一、大圖輪播 (左右文字 + 小箭頭 SERVICES 往下) -->
-    <!-- ⭐輪播圖還沒教到，需查資料 -->
+    <!-- 一、大圖切換圖片(左右文字 + 小箭頭 SERVICES 往下) -->
     <div id="section01">
       <div class="container">
         <!-- 大圖 -->
@@ -745,28 +743,28 @@
 
         <div class="col">
           <div class="card">
-            <h1><i class="fa-solid fa-compass"></i> 145K</h1>
+            <h1><i class="fa-solid fa-compass"></i> <span class="date1"></span>K</h1>
             <p>PROJECT COMPLETE</p>
           </div>
         </div>
 
         <div class="col">
           <div class="card">
-            <h1><i class="fa-solid fa-briefcase"></i> 2456</h1>
+            <h1><i class="fa-solid fa-briefcase"></i> <span class="date2"></span></h1>
             <p>CUPS OF COFFEE CONSUMED</p>
           </div>
         </div>
 
         <div class="col">
           <div class="card">
-            <h1><i class="fa-solid fa-mug-saucer"></i> 3125</h1>
+            <h1><i class="fa-solid fa-mug-saucer"></i> <span class="date3"></span></h1>
             <p>CUPS OF COFFEE CONSUMED</p>
           </div>
         </div>
 
         <div class="col">
           <div class="card">
-            <h1><i class="fa-solid fa-shield-halved"></i> 2478</h1>
+            <h1><i class="fa-solid fa-shield-halved"></i> <span class="date4"></span></h1>
             <p>ANSWERED QUESTIONS</p>
           </div>
         </div>
@@ -1018,7 +1016,7 @@
         </div>
 
         <div class="col">
-          <div class="footer_text"></div>
+          <div class="footer_text">
             <h1> ↑ </h1>
             <h2> Go on top</h2>
           </div>
@@ -1033,8 +1031,14 @@
     integrity='sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=='
     crossorigin='anonymous'></script>
 
+  <!-- gsap 主程式 -->
+  <script src="./gsap/gsap.js"></script>
+
+  <!-- 引入 scrollTrigger plugin -->
+  <script src="./gsap/ScrollTrigger.js"></script>
+
   <script>
-    // 切換圖片
+    // 一、大圖切換圖片
     // 用 true / false 判斷第一張和第二張圖片
     let flag = true
     // 抓到2個按鈕
@@ -1058,34 +1062,69 @@
     })
 
 
-    // 滾輪滾動至頂 - 未完
-    // onscroll事件
-    // 當一個元素的滾動條被滾動出現的 onscroll事件
-    // 使用CSS 溢出樣式屬性創建一個元素的滾動條
-    // window.onscroll = function () { myfunction() }
-    // window.onscroll = function handleScroll() {
-    //   console.log('window.onscroll');
-    // };
 
-    // 抓視窗最頂部 => 原本是 window.pageYOffset 改抓 section 最頂部
-    let section = document.getElementById("section")
-    let section_top = section.offsetTop
+    // 二、header navbar(導覽列滑動後會置頂 滾輪事件) 
+    // onscroll 滾輪事件
+    // 抓視窗最頂部 window.onscroll
+    // 視窗滾動 = function 名稱() { 執行內容 }
+    window.onscroll = function stickys() { 
+      let section02_navbar = document.getElementById("section02")
+      let section02_sticky = section02_navbar.offsetTop 
+      // offsetTop  => section02_sticky <=> 780  從頂部 0 到 header navbar 的距離
 
-    // section02 最頂部
-    let section02_navbar = document.getElementById("section02")
-    let section02_sticky = section02_navbar.clientTop
-    // console.log(section02_navbar) => 抓到的是html
-
-    function myfunction() {
-      if (section_top >= section02_sticky) {
+      // pageYOffset 滾動距離 >= header navbar 頂部的位置
+      if (window.pageYOffset >= 780) {
+        console.log("hihi");
+        // 原本 CSS 裡 position:relative 改成 position:fixed
+        section02_navbar.style.position="fixed"
         section02_navbar.classList.add("sticky")
+        // 新增一個 class => .sticky
       } else {
+        // 滾回去時 window.pageYOffset < 780 要回到原來位置
+        section02_navbar.style.position="relative"
         section02_navbar.classList.remove("sticky")
-      }
-
-      // console.log(section02_sticky)
-      // console.log(section_top)
+      } 
     }
+
+
+
+    // 十一、數據 (PROJECT COMPLETE + CLIENT WORKED WITH + CUPS OF COFFEE CONSUMED + ANSWERED QUESTIONS)
+    // Gsap.scrollTrigger_05.object
+    gsap.registerPlugin(ScrollTrigger)
+    const date = {
+      num1: 145,
+      num2: 2456,
+      num3: 3125,
+      num4: 2478
+    }
+
+    gsap.from(date, {
+      scrollTrigger: {
+        trigger: '#section11',
+        start: 'top center',
+        end: 'bottom center',
+        toggleActions: 'play none none reset',
+        // markers: true
+      },
+      num1: 0,
+      num2: 0,
+      num3: 0,
+      num4: 0,
+      onUpdate() {
+        $('.date1').text(parseInt(date.num1))
+        $('.date2').text(parseInt(date.num2))
+        $('.date3').text(parseInt(date.num3))
+        $('.date4').text(parseInt(date.num4))
+      },
+      duration: 1,
+      // ease: 'back',
+      // yoyo: true,
+      // repeat: -1,
+    })
+
+
+
+
   </script>
 
 </body>

@@ -1,8 +1,6 @@
-/* --- 手機最小尺寸 ------------- */
-
 /* --- 視窗大小設定 ------------- */
-#section {
-  overflow: hidden;
+body {
+  overflow-x: hidden;
   margin: auto;
   box-sizing: border-box;
   font-family: 'Montserrat', sans-serif;
@@ -24,6 +22,7 @@ a {
   color: white;
 }
 
+/* --- 手機最小尺寸 ------------- */
 /* --- 一、大圖區 section01 ------------- */
 #section01 {
   margin: 0;
@@ -53,7 +52,7 @@ a {
   left: 0;
   border: none;
   background: rgba(0, 0, 0, 0.4);
-  z-index: 3;
+  z-index: 5;
 }
 
 #section01 .leftbtn:hover {
@@ -81,7 +80,7 @@ a {
   right: 0;
   border: none;
   background: rgba(0, 0, 0, 0.4);
-  z-index: 3;
+  z-index: 5;
 }
 
 #section01 .rightbtn:hover {
@@ -167,6 +166,7 @@ a {
   background-color: #e74c3c;
   height: 100px;
   position: relative;
+  z-index: 10;
 }
 
 /* 滾輪滾動置頂設定 - 搭配 JS 內容 */
@@ -175,6 +175,7 @@ a {
   position: fixed;
   top: 0;
   width: 100%;
+  z-index: 10;
 }
 
 /* --- logo ------------- */
@@ -561,7 +562,7 @@ input {
 }
 
 #section05 .textbox_COOLCHAIRS p {
-  font-size: 14px;
+  font-size: 18px;
 }
 
 #section05 .textbox_COOLCHAIRS:hover {
@@ -1138,6 +1139,30 @@ input {
   font-weight: 300;
 }
 
+
+/* 十一、數據 */
+/* #section11 {
+  height: 100vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
+
+/* section:nth-child(odd) {
+  background: lightcyan;
+}
+
+section:nth-child(even) {
+  background: #eee;
+} */
+
+/* #date {
+  height: 5rem;
+  font-size: 5rem;
+} */
+
+
 /* 十二、LATEST POSTS */
 #section12 .container {
   width: 60%;
@@ -1568,6 +1593,10 @@ input {
   margin: 20px 20px;
 }
 
+#section17 .col .card_left button:hover {
+  background: rgb(60, 60, 60);
+}
+
 /* 右區塊文字 + 按鈕 */
 #section17 .col .card_right p {
   display: none;
@@ -1590,6 +1619,10 @@ input {
   color: #fff;
   border: none;
   margin: 20px 20px;
+}
+
+#section17 .col .card_right button:hover {
+  background: #e74c3c;
 }
 
 /* 十八、footer */
@@ -1985,11 +2018,11 @@ input {
   }
 
   #section05 .textbox_COOLCHAIRS h2 {
-    font-size: 22px;
+    font-size: 28px;
   }
 
   #section05 .textbox_COOLCHAIRS p {
-    font-size: 12px;
+    font-size: 20px;
   }
 
 
